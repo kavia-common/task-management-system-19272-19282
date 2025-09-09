@@ -1,0 +1,4 @@
+{
+    "command": "npm install && npm run build",
+    "working_directory": "/home/kavia/workspace/code-generation/task-management-system-19272-19282/todo_frontend"
+}
