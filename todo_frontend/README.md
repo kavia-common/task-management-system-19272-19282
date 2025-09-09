@@ -1,75 +1,33 @@
-# Nuxt Minimal Starter
+# Nuxt Todo Frontend
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A Nuxt 3 SPA for authentication and task management.
 
-## Setup
+## Configure API base URL
 
-Make sure to install dependencies:
+Create `.env` (or set env vars) using `.env.example`:
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+```
+NUXT_PUBLIC_API_BASE=http://localhost:4000
 ```
 
-## Development Server
+This should point to the todo_backend base URL.
 
-Start the development server on `http://localhost:3000`:
+## Scripts
 
-```bash
-# npm
-npm run dev
+- Install: `npm install`
+- Dev server: `npm run dev` (http://localhost:3000)
+- Build: `npm run build`
+- Preview: `npm run preview`
+- Lint: `npm run lint`
 
-# pnpm
-pnpm dev
+## Features
 
-# yarn
-yarn dev
+- Sign up, login, logout
+- JWT stored in localStorage (SPA constraint)
+- View, create, edit, delete tasks
+- Responsive minimal UI, no external CSS deps
 
-# bun
-bun run dev
-```
+## Notes
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- If backend uses a different port/host, change `NUXT_PUBLIC_API_BASE`.
+- On 401 responses, the app clears session and redirects to login.
